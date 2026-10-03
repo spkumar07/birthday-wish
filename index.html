@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf8f2">
+  <title>Little Moments — make a website for someone special</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">l.</span> little moments</div><div class="top-note">A tiny website, made with a lot of love</div></header>
+  <main>
+    <section class="intro" id="intro">
+      <div><p class="eyebrow">A keepsake, made personal</p><h1>Make their day feel like yours.</h1><p class="intro-copy">A little page for the person who makes your days brighter.</p></div>
+      <nav class="stepper" aria-label="Website creation steps"><div class="step active" id="stepOne"><span>1</span> The details</div><i class="step-line"></i><div class="step" id="stepTwo"><span>2</span> Pick a style</div><i class="step-line"></i><div class="step" id="stepThree"><span>3</span> Your website</div></nav>
+    </section>
+    <section class="workspace" id="detailsStep">
+      <form class="form-panel" id="detailsForm">
+        <h2 class="panel-title">Let's make it theirs</h2><p class="panel-subtitle">Start with a few details only the two of you know.</p>
+        <div class="fields">
+          <div class="field"><label for="occasion">We're celebrating</label><select id="occasion" name="occasion"><option value="Birthday">Birthday</option><option value="Anniversary">Anniversary</option><option value="Just because">Just because</option></select></div>
+          <div class="field"><label for="date">Their special date</label><div class="date-field"><input id="date" name="date" type="date" required><span class="date-icon" aria-hidden="true">▦</span></div></div>
+          <div class="field"><label for="recipient">Their name</label><input id="recipient" name="recipient" placeholder="Who is this little page for?" required maxlength="60"></div>
+          <div class="field"><label for="yourName">Made with love by <span class="optional">(optional)</span></label><input id="yourName" name="yourName" placeholder="Your name" maxlength="60"></div>
+          <div class="field wide"><span class="field-label">Profile photo <span class="optional">(optional)</span></span><div class="upload"><div class="upload-preview" id="profilePreview" aria-hidden="true">♡</div><div class="upload-copy"><strong id="profileName">Choose their portrait</strong><small>One photo · appears on the gift card</small></div><button class="upload-button" id="chooseProfile" type="button">Choose portrait</button><input id="profilePhoto" type="file" accept="image/png,image/jpeg,image/webp"></div></div>
+          <div class="field wide"><span class="field-label">Slideshow photos <span class="optional">(optional)</span></span><div class="upload"><div class="upload-preview" id="uploadPreview" aria-hidden="true">▧</div><div class="upload-copy"><strong id="uploadName">Choose separate memory photos</strong><small>Up to 8 photos · JPG, PNG or WebP</small></div><button class="upload-button" id="choosePhoto" type="button">Choose slideshow photos</button><input id="photo" type="file" accept="image/png,image/jpeg,image/webp" multiple></div></div>
+          <div class="field wide"><span class="field-label">With love, in the background <span class="optional">(optional)</span></span><div class="upload"><div class="upload-preview music-preview" aria-hidden="true">♫</div><div class="upload-copy"><strong id="musicName">Choose a song for the memories</strong><small>MP3, M4A, WAV or OGG · visitor taps to play</small></div><button class="upload-button" id="chooseMusic" type="button">Choose song</button><input id="music" type="file" accept="audio/*"></div></div>
+          <div class="field" id="metField"><label for="firstMet">When did you first meet? <span class="optional">(optional)</span></label><input id="firstMet" name="firstMet" placeholder="A little date or place" maxlength="80"></div>
+          <div class="field hidden" id="yearsField"><label for="years">Years together <span class="optional">(optional)</span></label><input id="years" name="years" type="number" min="1" max="100" placeholder="e.g. 3"></div>
+          <div class="field wide"><label for="favorites">Things you love about them <span class="optional">(optional)</span></label><textarea id="favorites" name="favorites" placeholder="Their laugh, your late-night walks, the way they always..." maxlength="500"></textarea></div>
+          <div class="field wide"><label for="promise">A promise for the days ahead <span class="optional">(optional)</span></label><textarea id="promise" name="promise" placeholder="Something you want them to know you'll always do..." maxlength="400"></textarea></div>
+        </div>
+        <div class="form-actions"><p class="privacy-note">Your photos and song stay on this device.</p><button class="primary-button" type="submit">Choose a style <span aria-hidden="true">→</span></button></div>
+      </form>
+      <aside class="preview-panel" aria-label="Live website preview"><div class="preview-head"><span>A little preview</span><span class="live-tag">● LIVE</span></div><div class="mini-site"><div class="mini-photo" id="miniPhoto" aria-hidden="true">♡</div><p class="mini-kicker" id="miniKicker">A day all about you</p><h3 id="miniName">Someone wonderful</h3><p class="mini-date" id="miniDate">Your special date goes here</p><div class="mini-rule"></div><p class="mini-message" id="miniMessage">The little things are what make you, you.</p></div><div class="preview-foot">Your details find their way into the finished page.</div></aside>
+    </section>
+    <section class="workspace hidden" id="styleStep">
+      <div class="form-panel"><h2 class="panel-title">Choose their kind of magic</h2><p class="panel-subtitle">Both styles turn your memories into a page made just for them.</p>
+        <div class="plans" role="radiogroup" aria-label="Website style">
+          <label class="plan-option selected" id="normalCard"><input type="radio" name="plan" value="normal" checked><div class="plan-name">The Classic</div><div class="plan-price">Free</div><ul class="plan-list"><li>A warm, elegant keepsake</li><li>Your photo and personal details</li><li>Made to feel lovely on any screen</li></ul></label>
+          <label class="plan-option elite-option" id="eliteCard"><input type="radio" name="plan" value="elite"><div class="plan-name">The Little Extra</div><div class="plan-price">A little extra magic</div><ul class="plan-list"><li>Everything in The Classic</li><li>Animated details and motion</li><li>A little more celebration</li></ul></label>
+        </div>
+        <p class="payment-note">Elite checkout is not connected in this demo; choosing it only previews the extra animations.</p>
+        <div class="field support-field"><label for="supportUrl">Developer support link <span class="optional">(optional)</span></label><input id="supportUrl" type="url" placeholder="https://... or a UPI payment link"><small>A QR code will be made for this link on the finished page.</small></div>
+        <div class="form-actions plan-actions"><button class="secondary-button" id="backToDetails" type="button">← Back</button><button class="primary-button" id="buildButton" type="button">Build their website <span aria-hidden="true">→</span></button></div>
+      </div>
+      <aside class="preview-panel" aria-label="Selected style preview"><div class="preview-head"><span>Picked for them</span><span class="live-tag" id="selectedPlanName">THE CLASSIC</span></div><div class="mini-site" id="stylePreview"><div class="mini-photo" id="stylePhoto" aria-hidden="true">♡</div><p class="mini-kicker" id="styleKicker">A day all about you</p><h3 id="styleName">Someone wonderful</h3><p class="mini-date" id="styleDate">Your special date goes here</p><div class="mini-rule"></div><p class="mini-message" id="styleMessage">The little things are what make you, you.</p></div><div class="preview-foot">You can go back and change any detail.</div></aside>
+    </section>
+    <section class="result-wrap hidden" id="resultStep">
+      <div class="result-bar"><div><p>Your little website is ready.</p><small class="result-status" id="saveStatus" role="status">Preparing your website…</small></div><div class="result-bar-actions"><a class="secondary-button hidden" id="openWebsiteLink" target="_blank" rel="noopener noreferrer">Open website</a><button class="secondary-button" id="editDetails" type="button">Edit details</button></div></div>
+      <article class="tribute-site" id="tributeSite">
+        <section class="tribute-hero" id="tributeHero"><div class="tribute-photo" id="resultPhoto" aria-hidden="true">♡</div><p class="tribute-kicker" id="resultKicker">A day all about you</p><h2 id="resultName">Someone wonderful</h2><p class="tribute-date" id="resultDate"></p></section>
+        <section class="tribute-body"><p class="eyebrow">A note for you</p><h3>All the little things</h3><p class="tribute-message" id="resultMessage"></p><div class="memory-row" id="memoryRow"></div><div class="promise" id="resultPromise"></div></section>
+        <section class="support-section"><img class="qr-image" id="supportQr" alt="QR code for the developer support link"><div><h3>Support the developer to make this special 🤌</h3><p id="supportCopy">A little support helps make more thoughtful websites like this one.</p><a class="support-link" id="supportAnchor" href="#" target="_blank" rel="noopener noreferrer">Visit the support link</a></div></section>
+      </article>
+      <div class="result-actions"><button class="secondary-button" id="downloadButton" type="button">↓ Download website</button><button class="primary-button" id="startOverButton" type="button">Make another one</button></div>
+    </section>
+  </main>
+  <script src="./assets/app.js" defer></script>
+</body>
+</html>
